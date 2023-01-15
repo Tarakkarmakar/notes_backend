@@ -9,7 +9,10 @@ const app=express()
 app.use(express.json())
 
 
-app.get("/welcome to Home page of my API")
+app.get("/", (res,req)=>{
+
+    res.send("welcome to Home page of my API")
+})
 
 app.use("/users",userRoute)
 
